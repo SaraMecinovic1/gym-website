@@ -7,6 +7,7 @@ import HomePageGrafic from "@/assets/HomePageGraphic.png";
 import SponsorRedBull from "@/assets/SponsorRedBull.png";
 import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
+import AloYoga from "@/assets/AloYoga.png"
 
 type Props = {
   setSelectedPage: (value: Page) => void;
@@ -18,6 +19,7 @@ function Home({ setSelectedPage }: Props) {
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER */}
+
       <div>
         {/* MAIN HEADER */}
         <div>
@@ -57,15 +59,18 @@ function Home({ setSelectedPage }: Props) {
         </div>
       </div>
 
-      <div>
+      {isAboveMediumScreen && (
         <div>
           <div>
-            <img src={SponsorRedBull} alt="redbull-sponsor" />
-            <img src={SponsorForbes} alt="forbes-sponsor" />
-            <img src={SponsorFortune} alt="fortune-sponsor" />
+            <div>
+              <img src={AloYoga} alt="fortune-sponsor" />
+              <img src={SponsorRedBull} alt="redbull-sponsor" />
+              <img src={SponsorForbes} alt="forbes-sponsor" />
+              <img src={SponsorFortune} alt="fortune-sponsor" />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }
