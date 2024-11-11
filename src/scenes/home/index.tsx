@@ -88,7 +88,7 @@ function Home({ setSelectedPage }: Props) {
       </motion.div>
 
       {isAboveMediumScreen && (
-        <div className="h-[117px]  w-full bg-primary-100 py-10">
+        <div className="h-[135px]  w-full bg-primary-100 py-10">
           <div className="mx-auto w-5/6  flex justify-center">
             <div className=" flex  w-3/4 items-center justify-between gap-8">
               <img
