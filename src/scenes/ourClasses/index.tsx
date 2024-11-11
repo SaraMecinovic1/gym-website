@@ -76,7 +76,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
 
         {/* Container for scrolling images */}
         <div className="mt-10 mx-10 overflow-x-auto">
-          <ul className="flex gap-5 w-[1800px]">
+          <ul className="flex gap-5 w-[100%]">
             {classes.map((item: ClassType, index) => (
               <Class
                 key={`${item.name}-${index}`}
