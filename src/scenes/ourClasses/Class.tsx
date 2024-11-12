@@ -11,13 +11,13 @@ const Class = ({ name, description, image }: Props) => {
         transition duration-500 opacity-0 hover:opacity-90`;
 
   return (
-    <li className="relative w-[400px] h-[380px] flex-shrink-0 group">
+    <li className="relative aspect-[4/3] w-full sm:w-[300px] md:w-[400px] lg:w-[500px] flex-shrink-0 group">
       <div className={overlayStyles}>
         <p className="text-2xl">{name}</p>
-        {description && <p className="mt-5">{description}</p>}
+        {description && <p className="text-sm mt-5">{description}</p>}
       </div>
       <img
-        className="w-full h-full object-cover border border-gray"
+        className="w-full h-full object-cover object-center border border-gray"
         alt={name}
         src={image}
       />
