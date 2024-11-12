@@ -9,19 +9,21 @@ type Props = {
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
-  px-5 py-3 placeholder-white`;
+  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
 
   const {
     register,
     trigger,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    const isValid = await trigger(); // Trigger validation
+    const isValid = await trigger();
     if (!isValid) {
-      e.preventDefault(); // Prevent form submission if validation fails
+      e.preventDefault();
+    } else {
+      reset();
     }
   };
 
